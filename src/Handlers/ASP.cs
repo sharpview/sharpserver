@@ -7,7 +7,6 @@ using System.Collections.Specialized;
 //-----------------------------------------------------------------
 //
 //    Sharpserver - Embedded Webserver
-//             http://github.com/muis/Sharpserver
 //
 //    This library is free software; you can redistribute it 
 //    and modify it under the terms of the GNU General Public
