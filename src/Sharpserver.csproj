@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C5B0068F-5C6A-4C0A-9F3D-A41A1E0F3629}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sharpserver</RootNamespace>
+    <AssemblyName>Sharpserver</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Wrapper.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Handlers\Static.cs" />
+    <Compile Include="Handlers\PHP.cs" />
+    <Compile Include="Handlers\ASP.cs" />
+    <Compile Include="Mono\AltSerialization.cs" />
+    <Compile Include="Mono\BaseParamsCollection.cs" />
+    <Compile Include="Mono\ChunkedInputStream.cs" />
+    <Compile Include="Mono\ChunkStream.cs" />
+    <Compile Include="Mono\EndPointListener.cs" />
+    <Compile Include="Mono\EndPointManager.cs" />
+    <Compile Include="Mono\HttpCachePolicy.cs" />
+    <Compile Include="Mono\HttpConnection.cs" />
+    <Compile Include="Mono\HttpEncoder.cs" />
+    <Compile Include="Mono\HttpException.cs" />
+    <Compile Include="Mono\HttpFileCollection.cs" />
+    <Compile Include="Mono\HttpListener.cs" />
+    <Compile Include="Mono\HttpListenerBasicIdentity.cs" />
+    <Compile Include="Mono\HttpListenerContext.cs" />
+    <Compile Include="Mono\HttpListenerException.cs" />
+    <Compile Include="Mono\HttpListenerPrefixCollection.cs" />
+    <Compile Include="Mono\HttpListenerRequest.cs" />
+    <Compile Include="Mono\HttpListenerResponse.cs" />
+    <Compile Include="Mono\HttpPostedFile.cs" />
+    <Compile Include="Mono\HttpSessionState.cs" />
+    <Compile Include="Mono\HttpStaticObjectsCollection.cs" />
+    <Compile Include="Mono\HttpStreamAsyncResult.cs" />
+    <Compile Include="Mono\HttpUtility.cs" />
+    <Compile Include="Mono\IHttpHandler.cs" />
+    <Compile Include="Mono\IHttpHandlerFactory.cs" />
+    <Compile Include="Mono\ILocation.cs" />
+    <Compile Include="Mono\InputFilterStream.cs" />
+    <Compile Include="Mono\ListenerAsyncResult.cs" />
+    <Compile Include="Mono\ListenerPrefix.cs" />
+    <Compile Include="Mono\Location.cs" />
+    <Compile Include="Mono\ParseException.cs" />
+    <Compile Include="Mono\RequestStream.cs" />
+    <Compile Include="Mono\ResponseStream.cs" />
+    <Compile Include="Mono\ServerVariablesCollection.cs" />
+    <Compile Include="Mono\WebEventCodes.cs" />
+    <Compile Include="Mono\WebROCollection.cs" />
+    <Compile Include="Mono\HttpBrowserCapabilities.cs" />
+    <Compile Include="Mono\ISessionIDManager.cs" />
+    <Compile Include="Mono\ISessionStateItemCollection.cs" />
+    <Compile Include="Mono\SessionIDManager.cs" />
+    <Compile Include="Mono\SessionStateItemCollection.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
